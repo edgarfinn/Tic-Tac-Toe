@@ -1,2 +1,2 @@
 # Tic-Tac-Toe
-Everyone's favourite childhood game
+Tic Tac Toe (a.k.a Naughts and Crosses). Everyones favourite childhood game
