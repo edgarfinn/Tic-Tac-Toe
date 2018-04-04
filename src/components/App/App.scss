@@ -3,10 +3,8 @@
 .App {
   height: 100vh;
   width: 100vw;
-  background-color: pink;
+  background-image: url("./Assets/memphis-colorful.png");
+  background-repeat: repeat;
   box-sizing: border-box;
-}
-
-h1 {
-  // color: $primary;
+  text-align: center;
 }
