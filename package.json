@@ -8,6 +8,7 @@
     "dev": "webpack-dev-server --hot --config webpack.dev.js",
     "build": "NODE_ENV=production webpack --display-error-details --config webpack.prod.js",
     "postinstall": "NODE_ENV=production webpack --display-error-details --config webpack.prod.js",
+    "lint:css": "stylelint './src/**/*.js'",
     "test": "jest --watch"
   },
   "jest": {
@@ -39,8 +40,11 @@
     "html-webpack-plugin": "^3.2.0",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
-    "uglifyjs-webpack-plugin": "^1.2.4",
     "react-hot-loader": "^4.0.1",
+    "react-redux": "^5.0.7",
+    "redux": "^3.7.2",
+    "styled-components": "^3.2.5",
+    "uglifyjs-webpack-plugin": "^1.2.4",
     "webpack": "^3.11.0",
     "webpack-merge": "^4.1.2"
   },
@@ -59,6 +63,7 @@
     "eslint-plugin-import": "^2.10.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
+    "file-loader": "^1.1.11",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^22.4.3",
     "node-sass": "^4.8.3",
