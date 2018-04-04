@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
+import PageHeader from './PageHeader/Page_header';
 import './App.scss';
 
 class App extends Component {
@@ -14,7 +15,7 @@ class App extends Component {
     const { welcomeMessage } = this.state;
     return (
       <section className="App">
-        <h1>{welcomeMessage}</h1>
+        <PageHeader />
       </section>
     );
   }
