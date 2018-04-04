@@ -1,24 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { hot } from 'react-hot-loader';
 import PageHeader from './PageHeader/Page_header';
+import GameBoardContainer from '../../containers/GameBoardContainer/Game_board_container';
+
 import './App.scss';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      welcomeMessage: 'Welcome To React Custom!',
-    };
-  }
-  render() {
-    const { welcomeMessage } = this.state;
-    return (
-      <section className="App">
-        <PageHeader />
-      </section>
-    );
-  }
-}
+const App = () => (
+  <section className="App">
+    <PageHeader />
+    <GameBoardContainer />
+  </section>
+);
 
 export default hot(module)(App);
