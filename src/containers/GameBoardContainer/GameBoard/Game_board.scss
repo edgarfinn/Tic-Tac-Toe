@@ -1,0 +1,10 @@
+.game-board {
+  width: 250px;
+  height: 250px;
+  background-color: yellow;
+  margin: 2rem auto;
+  background-image: linear-gradient(
+   to top,
+   orange, rgb(0,0,0) 130%
+  );
+}
