@@ -7,8 +7,6 @@ import GameBoard from './GameBoard/Game_board';
 const GameBoardContainer = (props) => {
   const { currentPlayer } = props;
 
-  // console.log(currentPlayer);
-
   return (
     <GameBoard currentPlayer={currentPlayer} />
   );
