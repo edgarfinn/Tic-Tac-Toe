@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HashLine position="bottom" /> renders correctly position: bottom 1`] = `
+.c0 {
+  position: absolute;
+  box-sizing: border-box;
+  height: 0;
+  width: calc(100% - 20px);
+  border: 2px solid black;
+  border-radius: 3px;
+  left: auto;
+  top: calc(66.66% - 2px);
+}
+
+<HashLine
+  linePosition="bottom"
+>
+  <styled.div
+    position="bottom"
+  >
+    <div
+      className="c0"
+    />
+  </styled.div>
+</HashLine>
+`;
+
+exports[`<HashLine position="left" /> renders correctly position: left 1`] = `
+.c0 {
+  position: absolute;
+  box-sizing: border-box;
+  height: calc(100% - 20px);
+  width: 0;
+  border: 2px solid black;
+  border-radius: 3px;
+  left: calc(33.33% - 2px);
+  top: auto;
+}
+
+<HashLine
+  linePosition="left"
+>
+  <styled.div
+    position="left"
+  >
+    <div
+      className="c0"
+    />
+  </styled.div>
+</HashLine>
+`;
+
+exports[`<HashLine position="right" /> renders correctly position: right 1`] = `
+.c0 {
+  position: absolute;
+  box-sizing: border-box;
+  height: calc(100% - 20px);
+  width: 0;
+  border: 2px solid black;
+  border-radius: 3px;
+  left: calc(66.66% - 2px);
+  top: auto;
+}
+
+<HashLine
+  linePosition="right"
+>
+  <styled.div
+    position="right"
+  >
+    <div
+      className="c0"
+    />
+  </styled.div>
+</HashLine>
+`;
+
+exports[`<HashLine position="top" /> renders correctly position: top 1`] = `
+.c0 {
+  position: absolute;
+  box-sizing: border-box;
+  height: 0;
+  width: calc(100% - 20px);
+  border: 2px solid black;
+  border-radius: 3px;
+  left: auto;
+  top: calc(33.33% - 2px);
+}
+
+<HashLine
+  linePosition="top"
+>
+  <styled.div
+    position="top"
+  >
+    <div
+      className="c0"
+    />
+  </styled.div>
+</HashLine>
+`;
