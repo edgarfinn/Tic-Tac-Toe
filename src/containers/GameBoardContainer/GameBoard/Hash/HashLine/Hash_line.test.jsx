@@ -15,8 +15,8 @@ const setup = (props) => {
 };
 
 describe('<HashLine position="top" />', () => {
-  const properties = { linePosition: 'top', transition: '3' };
-  const { wrapper } = setup(properties);
+  const props = { linePosition: 'top', transition: '3' };
+  const { wrapper } = setup(props);
 
   it('renders correctly position: top', () => {
     expect(shallowToJson(wrapper)).toMatchSnapshot();
