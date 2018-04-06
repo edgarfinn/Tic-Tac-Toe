@@ -4,16 +4,24 @@ exports[`<HashLine position="bottom" /> renders correctly position: bottom 1`] =
 .c0 {
   position: absolute;
   box-sizing: border-box;
-  height: 0;
-  width: calc(100% - 20px);
-  border: 2px solid black;
+  height: 4px;
+  width: 0;
+  background-color: black;
   border-radius: 3px;
-  left: auto;
   top: calc(66.66% - 2px);
+  -webkit-animation: eOsxFE 0.7s;
+  animation: eOsxFE 0.7s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+  -webkit-animation-timing-function: cubic-bezier(.91,-0.1,.35,1);
+  animation-timing-function: cubic-bezier(.91,-0.1,.35,1);
 }
 
 <HashLine
   linePosition="bottom"
+  transition="2"
 >
   <styled.div
     position="bottom"
@@ -29,16 +37,24 @@ exports[`<HashLine position="left" /> renders correctly position: left 1`] = `
 .c0 {
   position: absolute;
   box-sizing: border-box;
-  height: calc(100% - 20px);
-  width: 0;
-  border: 2px solid black;
+  height: 0;
+  width: 4px;
+  background-color: black;
   border-radius: 3px;
   left: calc(33.33% - 2px);
-  top: auto;
+  -webkit-animation: xGUsi 0.7s;
+  animation: xGUsi 0.7s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+  -webkit-animation-timing-function: cubic-bezier(.91,-0.1,.35,1);
+  animation-timing-function: cubic-bezier(.91,-0.1,.35,1);
 }
 
 <HashLine
   linePosition="left"
+  transition="1"
 >
   <styled.div
     position="left"
@@ -54,16 +70,24 @@ exports[`<HashLine position="right" /> renders correctly position: right 1`] = `
 .c0 {
   position: absolute;
   box-sizing: border-box;
-  height: calc(100% - 20px);
-  width: 0;
-  border: 2px solid black;
+  height: 0;
+  width: 4px;
+  background-color: black;
   border-radius: 3px;
   left: calc(66.66% - 2px);
-  top: auto;
+  -webkit-animation: xGUsi 0.7s;
+  animation: xGUsi 0.7s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 2.4s;
+  animation-delay: 2.4s;
+  -webkit-animation-timing-function: cubic-bezier(.91,-0.1,.35,1);
+  animation-timing-function: cubic-bezier(.91,-0.1,.35,1);
 }
 
 <HashLine
   linePosition="right"
+  transition="4"
 >
   <styled.div
     position="right"
@@ -79,16 +103,24 @@ exports[`<HashLine position="top" /> renders correctly position: top 1`] = `
 .c0 {
   position: absolute;
   box-sizing: border-box;
-  height: 0;
-  width: calc(100% - 20px);
-  border: 2px solid black;
+  height: 4px;
+  width: 0;
+  background-color: black;
   border-radius: 3px;
-  left: auto;
   top: calc(33.33% - 2px);
+  -webkit-animation: eOsxFE 0.7s;
+  animation: eOsxFE 0.7s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 1.7999999999999998s;
+  animation-delay: 1.7999999999999998s;
+  -webkit-animation-timing-function: cubic-bezier(.91,-0.1,.35,1);
+  animation-timing-function: cubic-bezier(.91,-0.1,.35,1);
 }
 
 <HashLine
   linePosition="top"
+  transition="3"
 >
   <styled.div
     position="top"

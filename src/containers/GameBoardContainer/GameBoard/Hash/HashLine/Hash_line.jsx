@@ -2,47 +2,58 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import PropTypes from 'prop-types';
 
-const leftOffest = ({ position }) => {
+const offsetVal = ({ position }) => {
   switch (position) {
-    case 'left': return 'calc(33.33% - 2px)';
-    case 'right': return 'calc(66.66% - 2px)';
-    default:
-      return 'auto;';
-  }
-};
-
-const topOffest = ({ position }) => {
-  switch (position) {
+    case 'left':
     case 'top': return 'calc(33.33% - 2px);';
+    case 'right':
     case 'bottom': return 'calc(66.66% - 2px);';
     default:
       return 'auto;';
   }
 };
 
-const HashLine = ({ linePosition }) => {
-  const animationParam = (linePosition === 'top' || linePosition === 'bottom') ? 'width' : 'height';
+const offsetParam = ({ position }) => {
+  switch (position) {
+    case 'top':
+    case 'bottom': return 'top';
+    case 'left':
+    case 'right': return 'left';
+    default:
+      return 'auto;';
+  }
+};
 
-  const expand = keyframes`
+const HashLine = ({ linePosition, transition }) => {
+  const axis = (linePosition === 'top' || linePosition === 'bottom') ? 'X' : 'Y';
+  const animationParam = axis === 'X' ? 'width' : 'height';
+
+  const lengthen = keyframes`
     0% {
-      ${animationParam}: 4px;
+      ${animationParam}: 0;
     }
     100% {
       ${animationParam}: calc(100% - 20px);;
     }
   `;
 
+  const animationDelay = () => `${Number(transition) * 0.6}s`;
+
+  const initialHeight = axis === 'X' ? '4px' : '0';
+  const initialWidth = axis === 'Y' ? '4px' : '0';
+
   const StyledLine = styled.div`
     position: absolute;
     box-sizing: border-box;
-    height: 4px;
+    height: ${initialHeight};
+    width: ${initialWidth};
     background-color: black;
-    width: 4px;
     border-radius: 3px;
-    left: ${leftOffest};
-    top: ${topOffest};
-    animation: ${expand} 0.7s;
+    ${offsetParam}: ${offsetVal};
+    animation: ${lengthen} 0.7s;
     animation-fill-mode: forwards;
+    animation-delay: ${animationDelay};
+    animation-timing-function: cubic-bezier(.91,-0.1,.35,1);
   `;
 
   return (
@@ -52,7 +63,7 @@ const HashLine = ({ linePosition }) => {
 
 HashLine.propTypes = {
   linePosition: PropTypes.oneOf(['top', 'bottom', 'left', 'right']).isRequired,
-  // delay: PropTypes.oneOf([1, 2, 3, 4]).isRequired,
+  transition: PropTypes.oneOf(['1', '2', '3', '4']).isRequired,
 };
 
 export default HashLine;

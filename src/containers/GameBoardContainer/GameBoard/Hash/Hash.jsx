@@ -15,10 +15,10 @@ const Hash = () => {
 
   return (
     <HashGrid>
-      <HashLine linePosition="top" />
-      <HashLine linePosition="bottom" />
-      <HashLine linePosition="left" />
-      <HashLine linePosition="right" />
+      <HashLine linePosition="top" transition="1" />
+      <HashLine linePosition="bottom" transition="2" />
+      <HashLine linePosition="left" transition="3" />
+      <HashLine linePosition="right" transition="4" />
     </HashGrid>
   );
 };

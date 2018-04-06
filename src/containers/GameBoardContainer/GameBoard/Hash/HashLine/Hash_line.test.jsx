@@ -15,7 +15,7 @@ const setup = (props) => {
 };
 
 describe('<HashLine position="top" />', () => {
-  const properties = { linePosition: 'top' };
+  const properties = { linePosition: 'top', transition: '3' };
   const { wrapper } = setup(properties);
 
   it('renders correctly position: top', () => {
@@ -25,7 +25,7 @@ describe('<HashLine position="top" />', () => {
 });
 
 describe('<HashLine position="left" />', () => {
-  const properties = { linePosition: 'left' };
+  const properties = { linePosition: 'left', transition: '1' };
   const { wrapper } = setup(properties);
 
   it('renders correctly position: left', () => {
@@ -35,7 +35,7 @@ describe('<HashLine position="left" />', () => {
 });
 
 describe('<HashLine position="right" />', () => {
-  const properties = { linePosition: 'right' };
+  const properties = { linePosition: 'right', transition: '4' };
   const { wrapper } = setup(properties);
 
   it('renders correctly position: right', () => {
@@ -45,7 +45,7 @@ describe('<HashLine position="right" />', () => {
 });
 
 describe('<HashLine position="bottom" />', () => {
-  const properties = { linePosition: 'bottom' };
+  const properties = { linePosition: 'bottom', transition: '2' };
   const { wrapper } = setup(properties);
 
   it('renders correctly position: bottom', () => {
