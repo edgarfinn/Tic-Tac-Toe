@@ -1,27 +1,17 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import PropTypes from 'prop-types';
 
-export const lineHeight = ({ position }) => {
-  const height = (position === 'left' || position === 'right') ? 'calc(100% - 20px);' : '0;';
-  return height;
-};
-
-export const lineWidth = ({ position }) => {
-  const width = (position === 'top' || position === 'bottom') ? 'calc(100% - 20px);' : '0;';
-  return width;
-};
-
-export const leftOffest = ({ position }) => {
+const leftOffest = ({ position }) => {
   switch (position) {
-    case 'left': return 'calc(33.33% - 2px);';
-    case 'right': return 'calc(66.66% - 2px);';
+    case 'left': return 'calc(33.33% - 2px)';
+    case 'right': return 'calc(66.66% - 2px)';
     default:
       return 'auto;';
   }
 };
 
-export const topOffest = ({ position }) => {
+const topOffest = ({ position }) => {
   switch (position) {
     case 'top': return 'calc(33.33% - 2px);';
     case 'bottom': return 'calc(66.66% - 2px);';
@@ -31,15 +21,28 @@ export const topOffest = ({ position }) => {
 };
 
 const HashLine = ({ linePosition }) => {
+  const animationParam = (linePosition === 'top' || linePosition === 'bottom') ? 'width' : 'height';
+
+  const expand = keyframes`
+    0% {
+      ${animationParam}: 4px;
+    }
+    100% {
+      ${animationParam}: calc(100% - 20px);;
+    }
+  `;
+
   const StyledLine = styled.div`
     position: absolute;
     box-sizing: border-box;
-    height: ${lineHeight};
-    width: ${lineWidth};
-    border: 2px solid black;
+    height: 4px;
+    background-color: black;
+    width: 4px;
     border-radius: 3px;
     left: ${leftOffest};
     top: ${topOffest};
+    animation: ${expand} 0.7s;
+    animation-fill-mode: forwards;
   `;
 
   return (
@@ -49,6 +52,7 @@ const HashLine = ({ linePosition }) => {
 
 HashLine.propTypes = {
   linePosition: PropTypes.oneOf(['top', 'bottom', 'left', 'right']).isRequired,
+  // delay: PropTypes.oneOf([1, 2, 3, 4]).isRequired,
 };
 
 export default HashLine;
