@@ -11,6 +11,7 @@ const Hash = () => {
     height: 100%;
     padding: 10px;
     box-sizing: border-box;
+    z-index: 0;
   `;
 
   return (
