@@ -4,8 +4,7 @@ import PropTypes from 'prop-types';
 
 import GameBoard from './GameBoard/Game_board';
 
-const GameBoardContainer = (props) => {
-  const { currentPlayer } = props;
+const GameBoardContainer = ({ currentPlayer, occupations }) => {
   const cells = [
     'A1', 'A2', 'A3',
     'B1', 'B2', 'B3',
@@ -24,6 +23,7 @@ GameBoardContainer.propTypes = {
 const mapStateToProps = state => (
   {
     currentPlayer: state.currentPlayer,
+    occupations: state.boardOccupations,
   }
 );
 
