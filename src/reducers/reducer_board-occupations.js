@@ -1,3 +1,5 @@
+import { NEW_MOVE } from '../actions';
+
 const occupations = {
   A1: null,
   A2: null,
@@ -12,7 +14,7 @@ const occupations = {
 
 export default (state = occupations, action) => {
   switch (action.type) {
-    case 'HANDLE_TURN':
+    case NEW_MOVE:
       return action.payload;
     default:
       return state;

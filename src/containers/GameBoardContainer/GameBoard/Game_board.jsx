@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Hash from './Hash/Hash';
 import CellsList from './CellsList/Cells_list';
 
-const GameBoard = ({ currentPlayer, cells }) => {
+const GameBoard = ({ currentPlayer, cells, handleClick }) => {
   const Board = styled.div`
     position: relative;
     width: 250px;
@@ -22,7 +22,7 @@ const GameBoard = ({ currentPlayer, cells }) => {
   return (
     <Board>
       <Hash />
-      <CellsList cells={cells} />
+      <CellsList cells={cells} handleClick={handleClick} />
     </Board>
   );
 };
