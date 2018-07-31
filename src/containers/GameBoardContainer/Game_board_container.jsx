@@ -18,21 +18,22 @@ class GameBoardContainer extends Component {
   }
 
   render () {
-    const { currentPlayer } = this.props
-    const cells = [
-      'A1', 'A2', 'A3',
-      'B1', 'B2', 'B3',
-      'C1', 'C2', 'C3'
-    ]
+    const { currentPlayer, occupations } = this.props
 
     return (
-      <GameBoard currentPlayer={currentPlayer} cells={cells} handleClick={this.handleClick} />
+      <GameBoard
+        currentPlayer={currentPlayer}
+        handleClick={this.handleClick}
+        occupations={occupations}
+      />
     )
   }
 }
 
 GameBoardContainer.propTypes = {
-  currentPlayer: PropTypes.string.isRequired
+  currentPlayer: PropTypes.string.isRequired,
+  occupations: PropTypes.object.isRequired,
+  newMove: PropTypes.func.isRequired
 }
 
 const mapStateToProps = state => (

@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import Hash from './Hash/Hash'
-import CellsList from './CellsList/Cells_list'
+import BoardCells from './BoardCells/Board_cells'
 
 const Board = styled.div`
 position: relative;
@@ -20,14 +20,10 @@ flex-wrap: wrap;
 
 class GameBoard extends React.Component {
   render () {
-    const { currentPlayer, cells, handleClick } = this.props
     return (
       <Board className='game-board'>
         <Hash />
-        <CellsList
-          cells={cells}
-          handleClick={handleClick}
-          currentPlayer={currentPlayer} />
+        <BoardCells {...this.props} />
       </Board>
     )
   }
@@ -35,8 +31,7 @@ class GameBoard extends React.Component {
 
 GameBoard.propTypes = {
   currentPlayer: PropTypes.string.isRequired,
-  handleClick: PropTypes.func.isRequired,
-  cells: PropTypes.arrayOf(PropTypes.string).isRequired
+  handleClick: PropTypes.func.isRequired
 }
 
 export default GameBoard
