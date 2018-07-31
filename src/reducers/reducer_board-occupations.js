@@ -1,4 +1,4 @@
-import { NEW_MOVE } from '../actions';
+import { NEW_MOVE } from '../actions'
 
 const occupations = {
   A1: null,
@@ -9,14 +9,14 @@ const occupations = {
   B3: null,
   C1: null,
   C2: null,
-  C3: null,
-};
+  C3: null
+}
 
 export default (state = occupations, action) => {
   switch (action.type) {
     case NEW_MOVE:
-      return action.payload;
+      return action.payload
     default:
-      return state;
+      return state
   }
-};
+}
