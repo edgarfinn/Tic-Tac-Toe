@@ -23,7 +23,10 @@ class BoardCell extends Component {
       z-index: 1;
     `;
     return (
-      <Cell onClick={() => this.props.handleClick(cell)}>
+      <Cell onClick={(e) => {
+        e.stopPropagation()
+        this.props.handleClick(cell)}
+      }>X
         {occupation && 'X'}
       </Cell>
     );

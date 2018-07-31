@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
 import { newMove } from '../../actions';
-import GameBoard from './GameBoard/Game_board';
+import GameBoard from '../../components/App/GameBoard/Game_board';
 
 class GameBoardContainer extends Component {
   constructor(props) {
