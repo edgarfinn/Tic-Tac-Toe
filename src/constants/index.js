@@ -1,0 +1,3 @@
+export const UPDATE_OCCUPATIONS = 'UPDATE_OCCUPATIONS'
+export const NEW_MOVE = 'NEW_MOVE'
+export const SWITCH_PLAYERS = 'SWITCH_PLAYERS'
