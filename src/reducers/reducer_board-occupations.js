@@ -1,4 +1,4 @@
-import { NEW_MOVE } from '../actions'
+import { UPDATE_OCCUPATIONS } from '../constants'
 
 const occupations = {
   A1: null,
@@ -14,7 +14,7 @@ const occupations = {
 
 export default (state = occupations, action) => {
   switch (action.type) {
-    case NEW_MOVE:
+    case UPDATE_OCCUPATIONS:
       return action.payload
     default:
       return state
