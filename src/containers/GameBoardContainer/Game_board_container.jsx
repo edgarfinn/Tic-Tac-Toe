@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import PropTypes from 'prop-types'
-import { newMove } from '../../actions'
+import { startNewMove } from '../../sagas/sagas'
 import GameBoard from '../../components/App/GameBoard/Game_board'
 
 class GameBoardContainer extends Component {
@@ -13,8 +13,7 @@ class GameBoardContainer extends Component {
   }
 
   handleClick (cell) {
-    const { occupations, newMove, currentPlayer } = this.props
-    newMove(occupations, currentPlayer, cell)
+    this.props.startNewMove(cell)
   }
 
   render () {
@@ -33,7 +32,7 @@ class GameBoardContainer extends Component {
 GameBoardContainer.propTypes = {
   currentPlayer: PropTypes.string.isRequired,
   occupations: PropTypes.object.isRequired,
-  newMove: PropTypes.func.isRequired
+  startNewMove: PropTypes.func.isRequired
 }
 
 const mapStateToProps = state => (
@@ -43,6 +42,6 @@ const mapStateToProps = state => (
   }
 )
 
-const mapDispatchToProps = dispatch => (bindActionCreators({ newMove }, dispatch))
+const mapDispatchToProps = dispatch => (bindActionCreators({ startNewMove }, dispatch))
 
 export default connect(mapStateToProps, mapDispatchToProps)(GameBoardContainer)
