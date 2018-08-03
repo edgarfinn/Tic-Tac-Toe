@@ -1,4 +1,4 @@
-import { UPDATE_OCCUPATIONS } from '../constants'
+import { UPDATE_OCCUPATIONS } from '../constants/actionTypes.js'
 
 const occupations = {
   A1: null,
