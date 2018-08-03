@@ -24,10 +24,11 @@ exports[`<HashLine position="bottom" /> renders correctly position: bottom 1`] =
   transition="2"
 >
   <styled.div
+    className="hash-line"
     position="bottom"
   >
     <div
-      className="c0"
+      className="hash-line c0"
     />
   </styled.div>
 </HashLine>
@@ -57,10 +58,11 @@ exports[`<HashLine position="left" /> renders correctly position: left 1`] = `
   transition="1"
 >
   <styled.div
+    className="hash-line"
     position="left"
   >
     <div
-      className="c0"
+      className="hash-line c0"
     />
   </styled.div>
 </HashLine>
@@ -90,10 +92,11 @@ exports[`<HashLine position="right" /> renders correctly position: right 1`] = `
   transition="4"
 >
   <styled.div
+    className="hash-line"
     position="right"
   >
     <div
-      className="c0"
+      className="hash-line c0"
     />
   </styled.div>
 </HashLine>
@@ -123,10 +126,11 @@ exports[`<HashLine position="top" /> renders correctly position: top 1`] = `
   transition="3"
 >
   <styled.div
+    className="hash-line"
     position="top"
   >
     <div
-      className="c0"
+      className="hash-line c0"
     />
   </styled.div>
 </HashLine>
