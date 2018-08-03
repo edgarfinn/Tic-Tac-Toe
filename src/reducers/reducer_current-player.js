@@ -1,11 +1,12 @@
-import { SWITCH_PLAYERS } from '../constants'
+import { SWITCH_PLAYERS } from '../constants/actionTypes.js'
+import { NOUGHTS, CROSSES } from '../constants/players.js'
 
-export default (state = 'crosses', action) => {
+export default (state = CROSSES, action) => {
   switch (action.type) {
     case SWITCH_PLAYERS:
-      if (state === 'crosses') {
-        return 'noughts'
-      } return 'crosses'
+      if (state === CROSSES) {
+        return NOUGHTS
+      } return CROSSES
     default:
       return state
   }

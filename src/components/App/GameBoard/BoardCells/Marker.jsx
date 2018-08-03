@@ -42,7 +42,7 @@ const Marker = ({ mark }) => {
 }
 
 Marker.propTypes = {
-  mark: PropTypes.oneOf(['noughts', 'crosses']).isRequired
+  mark: PropTypes.oneOf(['NOUGHTS', 'CROSSES']).isRequired
 }
 
 export default Marker

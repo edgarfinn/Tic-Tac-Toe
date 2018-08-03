@@ -1,6 +1,6 @@
 import { all, put, takeEvery, select } from 'redux-saga/effects'
-import { UPDATE_OCCUPATIONS, NEW_MOVE } from '../constants'
-import { getOccupations, getCurrentPlayer } from '../selectors/gamestate'
+import { UPDATE_OCCUPATIONS, NEW_MOVE } from '../constants/actionTypes.js'
+import { getOccupations, getCurrentPlayer } from '../selectors/gamestate.js'
 
 const updateOccupations = (occupations, currentPlayer, cell) => (
   {
@@ -22,8 +22,6 @@ export function * newMove ({cell}) {
   const occupations = yield select(getOccupations)
   const currentPlayer = yield select(getCurrentPlayer)
   const { payload: newOccupations } = yield put(updateOccupations(occupations, currentPlayer, cell))
-
-  // const victoryState = yield assessVictory(newOccupations)
 
   // ASSESS VICTORY
   //   if(victory) {
