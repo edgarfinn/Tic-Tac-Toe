@@ -1,3 +1,5 @@
+import { NOUGHTS, CROSSES } from '../../constants/players'
+
 const winningCombinations = [
   ['A1', 'A2', 'A3'],
   ['B1', 'B2', 'B3'],
@@ -10,6 +12,6 @@ const winningCombinations = [
 ]
 
 export default occupations => {
-  console.log(occupations)
-  return {'A1': 'crosses', 'A2': 'crosses', 'A3': 'crosses'}
+  winningCombinations.filter(combination => {
+  })
 }
