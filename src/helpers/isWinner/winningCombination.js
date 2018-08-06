@@ -1,4 +1,3 @@
-import { NOUGHTS, CROSSES } from '../../constants/players'
 import { combinationMatches } from './combinationMatches.js'
 
 const winningCombinations = [
@@ -13,5 +12,5 @@ const winningCombinations = [
 ]
 
 export default occupations => {
-  return winningCombinations.filter(combo => combinationMatches(combo, occupations))[0]
+  return winningCombinations.filter(combo => combinationMatches(combo, occupations))[0] || null
 }
