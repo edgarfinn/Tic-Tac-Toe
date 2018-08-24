@@ -17,13 +17,14 @@ class GameBoardContainer extends Component {
   }
 
   render () {
-    const { currentPlayer, occupations } = this.props
+    const { currentPlayer, occupations, winningCells } = this.props
 
     return (
       <GameBoard
         currentPlayer={currentPlayer}
         handleClick={this.handleClick}
         occupations={occupations}
+        winningCells={winningCells}
       />
     )
   }
@@ -38,7 +39,8 @@ GameBoardContainer.propTypes = {
 const mapStateToProps = state => (
   {
     currentPlayer: state.currentPlayer,
-    occupations: state.boardOccupations
+    occupations: state.boardOccupations,
+    winningCells: state.winningCells
   }
 )
 

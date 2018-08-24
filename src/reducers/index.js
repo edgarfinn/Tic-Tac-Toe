@@ -1,10 +1,14 @@
 import { combineReducers } from 'redux'
-import CurrentPlayerReducer from './reducer_current-player'
-import BoardOccupationsreducer from './reducer_board-occupations'
+import currentPlayerReducer from './reducer_current-player'
+import boardOccupationsreducer from './reducer_board-occupations'
+import winningPlayer from './reducer_winning-player'
+import winningCells from './reducer_winning-cells'
 
 const rootReducer = combineReducers({
-  currentPlayer: CurrentPlayerReducer,
-  boardOccupations: BoardOccupationsreducer
+  currentPlayer: currentPlayerReducer,
+  boardOccupations: boardOccupationsreducer,
+  winningPlayer: winningPlayer,
+  winningCells: winningCells,
 })
 
 export default rootReducer
