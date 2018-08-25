@@ -38,7 +38,8 @@ const Naught = styled.div`
 `
 
 const Marker = ({ mark }) => {
-  return mark === 'noughts' ? <Naught /> : <Cross />
+  console.log('mark = ', mark)
+  return mark === 'NOUGHTS' ? <Naught /> : <Cross />
 }
 
 Marker.propTypes = {
